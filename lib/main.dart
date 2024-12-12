@@ -1,7 +1,12 @@
+import 'dart:async';
+import 'package:cosmetics_shop/features/main_page/screens/main_screen.dart';
 import 'package:flutter/material.dart';
+import 'dart:developer';
 
 void main() {
-  runApp(const MainApp());
+  runZonedGuarded(() => runApp(const MainApp()), (error, stack) {
+    log(error.toString(), name: 'App Error', stackTrace: stack);
+  });
 }
 
 class MainApp extends StatelessWidget {
@@ -10,11 +15,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: MainScreen(),
     );
   }
 }
