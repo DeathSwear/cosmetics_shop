@@ -1,5 +1,8 @@
 class MainPagePaddings {
   static const double left = 15;
+  static const double sliderInsideBottom = 29;
+  static const double sliderInsideLeft = 24;
+  static const double sliderInsideRight = 10;
   static const double sliderBottom = 25;
   static const double sortImageBottom = 8;
   static const double sortImageBlockBottom = 32;

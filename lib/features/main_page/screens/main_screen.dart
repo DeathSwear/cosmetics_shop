@@ -1,3 +1,9 @@
+import 'dart:async';
+
+import 'package:cosmetics_shop/features/main_page/data/classes/slider_data.dart';
+import 'package:cosmetics_shop/features/main_page/data/constants/main_page_sizes.dart';
+import 'package:cosmetics_shop/features/main_page/data/constants/other_main_page_constants.dart';
+import 'package:cosmetics_shop/features/main_page/widgets/image_placeholder.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -8,16 +14,85 @@ class MainScreen extends StatefulWidget {
 }
 
 class MainScreenState extends State<MainScreen> {
+  final List<SliderData> sliderData = OtherMainPageConstants.sliderData;
+  late List<Widget> _pages;
+  int _activePage = 0;
+  final PageController _pageController = PageController(initialPage: 0);
+  Timer? _timer;
+
+  void startTimer() {
+    _timer = Timer.periodic(OtherMainPageConstants.slideAwait, (timer) {
+      if (_pageController.page == sliderData.length - 1) {
+        _pageController.animateToPage(0,
+            duration: OtherMainPageConstants.slideTime,
+            curve: Curves.easeInOut);
+      } else {
+        _pageController.nextPage(
+            duration: OtherMainPageConstants.slideTime,
+            curve: Curves.easeInOut);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _timer?.cancel();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _pages = List.generate(
+        sliderData.length,
+        (index) => ImagePlaceholder(
+              data: sliderData[index],
+            ));
+    startTimer();
+  }
+
   @override
   Widget build(BuildContext context) {
+    double maxHeight = MediaQuery.of(context).size.height;
+    double maxWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       body: Expanded(
         child: ListView(
           children: [
-            Container(
-              height: 360,
-              color: Colors.red,
+            Stack(
+              children: [
+                SizedBox(
+                    height: maxHeight * MainPageSizes.sliderHeightScale,
+                    child: PageView.builder(
+                        controller: _pageController,
+                        onPageChanged: (value) {
+                          setState(() {
+                            _activePage = value;
+                          });
+                        },
+                        itemCount: sliderData.length,
+                        itemBuilder: (context, index) {
+                          return _pages[index];
+                        })),
+                Container(
+                  color: Colors.transparent,
+                  child: Row(
+                    children: List<Widget>.generate(
+                      _pages.length,
+                      (index) => Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 2),
+                          child: CircleAvatar(
+                            radius: 4,
+                            backgroundColor: _activePage == index
+                                ? Colors.yellow
+                                : Colors.yellow.withOpacity(0.5),
+                          )),
+                    ),
+                  ),
+                )
+              ],
             ),
             Container(
               height: 95 + 25 + 25,
