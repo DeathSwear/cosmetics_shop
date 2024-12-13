@@ -140,4 +140,9 @@ class OtherMainPageConstants {
         name: 'Unstress Total Serenity Serum',
         type: 'Сыворотка'),
   ];
+
+  static const String borderButtonCleansing = 'Очищение';
+  static const String borderButtonMoisturizing = 'Увлажнение';
+  static const String borderButtonNourishment = 'Питание';
+  static const String borderButtonRejuvenation = 'Омоложение';
 }

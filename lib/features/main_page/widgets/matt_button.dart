@@ -27,7 +27,7 @@ class MattButton extends StatelessWidget {
           fixedSize: Size(width, MainPageSizes.mattButtonHeight)),
       child: Text(
         text,
-        style: AppTextStyles.buttonText,
+        style: AppTextStyles.opacityButton,
       ),
     );
   }

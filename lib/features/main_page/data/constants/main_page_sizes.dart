@@ -1,3 +1,5 @@
+import 'package:cosmetics_shop/features/main_page/data/constants/main_page_paddings.dart';
+
 class MainPageSizes {
   static const double screenWidth = 375;
   static const double screenHeight = 812;
@@ -20,4 +22,8 @@ class MainPageSizes {
   static const double mattButtonHeight = 40;
   static const double beautiMattButtonWidth = 118;
   static const double shareImageSize = 25;
+  static const double borderButtonHeigthScale = 60 / screenHeight;
+  static const double borderButtonWidthScale =
+      (168 - MainPagePaddings.borderButtonSectionHorizontal * 1.125) /
+          (screenWidth - MainPagePaddings.borderButtonSectionHorizontal * 2);
 }

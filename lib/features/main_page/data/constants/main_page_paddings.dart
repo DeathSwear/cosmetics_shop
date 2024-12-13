@@ -26,4 +26,6 @@ class MainPagePaddings {
   static const double beautiRight = 16;
   static const double beautiBottom = 40;
   static const double shareImage = 8;
+  static const double borderButtonBottom = 8;
+  static const double borderButtonSectionHorizontal = 16;
 }

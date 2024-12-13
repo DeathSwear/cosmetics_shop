@@ -14,7 +14,7 @@ class AppTextStyles {
     fontSize: 16,
     color: AppColors.whiteColor,
   );
-  static const buttonText = TextStyle(
+  static const opacityButton = TextStyle(
     //Raleway
     fontWeight: FontWeight.w600,
     fontSize: 12,
@@ -72,6 +72,12 @@ class AppTextStyles {
     //Raleway
     fontWeight: FontWeight.w500,
     fontSize: 13,
+    color: AppColors.blackColor,
+  );
+  static const borderButton = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
     color: AppColors.blackColor,
   );
 }

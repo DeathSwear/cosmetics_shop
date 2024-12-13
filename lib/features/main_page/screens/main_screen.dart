@@ -4,6 +4,7 @@ import 'package:cosmetics_shop/features/main_page/data/classes/slider_data.dart'
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_paddings.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_sizes.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/other_main_page_constants.dart';
+import 'package:cosmetics_shop/features/main_page/widgets/border_button.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/category.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/home_care_section.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/slide_placeholder.dart';
@@ -119,6 +120,42 @@ class MainScreenState extends State<MainScreen> {
               tag: OtherMainPageConstants.categoryShareTitle,
               data: OtherMainPageConstants.cateroryShareItems,
               gradient: AppColors.purpleGradient),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: MainPagePaddings.borderButtonSectionHorizontal),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    BorderButton(
+                        text: OtherMainPageConstants.borderButtonCleansing,
+                        onPressed: () {}),
+                    BorderButton(
+                        text: OtherMainPageConstants.borderButtonMoisturizing,
+                        onPressed: () {}),
+                  ],
+                ),
+                const SizedBox(
+                  height: MainPagePaddings.borderButtonBottom,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    BorderButton(
+                        text: OtherMainPageConstants.borderButtonNourishment,
+                        onPressed: () {}),
+                    BorderButton(
+                        text: OtherMainPageConstants.borderButtonRejuvenation,
+                        onPressed: () {}),
+                  ],
+                )
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: MainPagePaddings.beautiBottom,
+          ),
           Category(
               tag: OtherMainPageConstants.categoryHitsTitle,
               data: OtherMainPageConstants.cateroryHitsItems,
