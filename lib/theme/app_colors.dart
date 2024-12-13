@@ -10,9 +10,17 @@ class AppColors {
   static const Color black80Color = Color.fromRGBO(0, 0, 0, 0.8);
   static const Color whiteGray = Color.fromRGBO(244, 244, 244, 1);
 
+  static const LinearGradient greenGradient = LinearGradient(colors: [
+    Color.fromRGBO(228, 254, 249, 1),
+    Color.fromRGBO(102, 246, 220, 1),
+  ], begin: Alignment.centerLeft, end: Alignment.centerRight);
   static const LinearGradient purpleGradient = LinearGradient(colors: [
-    Color.fromRGBO(150, 124, 253, 1),
-    Color.fromRGBO(83, 45, 106, 1),
+    Color.fromRGBO(255, 192, 225, 1),
+    Color.fromRGBO(240, 41, 128, 1),
+  ], begin: Alignment.centerLeft, end: Alignment.centerRight);
+  static const LinearGradient orangeGradient = LinearGradient(colors: [
+    Color.fromRGBO(248, 102, 20, 1),
+    Color.fromRGBO(252, 188, 92, 1),
   ], begin: Alignment.centerLeft, end: Alignment.centerRight);
 
   static const mattButtonColor = Color.fromRGBO(43, 43, 43, 1);

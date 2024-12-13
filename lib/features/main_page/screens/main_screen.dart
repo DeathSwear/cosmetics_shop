@@ -106,22 +106,23 @@ class MainScreenState extends State<MainScreen> {
           const SizedBox(height: MainPagePaddings.sliderBottom),
           const SortBlockSlider(),
           Category(
-              tag: 'Новинки',
+              tag: OtherMainPageConstants.categoryNewTitle,
               data: OtherMainPageConstants.cateroryNewItems,
-              gradient: AppColors.purpleGradient),
+              gradient: AppColors.greenGradient),
           HomeCareSection(
             text: OtherMainPageConstants.beautiText,
             title: OtherMainPageConstants.beautiTitle,
             data: OtherMainPageConstants.beautiSliderData,
           ),
-          Container(
-            height: 40,
-            color: Colors.green,
-          ),
-          Container(
-            height: 280,
-            color: Colors.blue,
-          ),
+          const SizedBox(height: MainPagePaddings.beautiBottom),
+          Category(
+              tag: OtherMainPageConstants.categoryShareTitle,
+              data: OtherMainPageConstants.cateroryShareItems,
+              gradient: AppColors.purpleGradient),
+          Category(
+              tag: OtherMainPageConstants.categoryHitsTitle,
+              data: OtherMainPageConstants.cateroryHitsItems,
+              gradient: AppColors.orangeGradient),
         ],
       ),
     );

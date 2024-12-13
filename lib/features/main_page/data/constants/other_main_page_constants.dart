@@ -35,6 +35,7 @@ class OtherMainPageConstants {
     SortImageBlocData(img: ImageSource.slider1, text: 'Для ногтей'),
   ];
 
+  static const String categoryNewTitle = 'Новинки';
   static List<CategoryItemData> cateroryNewItems = [
     CategoryItemData(
         img: ImageSource.new1,
@@ -75,5 +76,68 @@ class OtherMainPageConstants {
     SortImageBlocData(img: ImageSource.beauti4, text: 'Дневной крем'),
     SortImageBlocData(img: ImageSource.beauti1, text: 'Демакияж2'),
     SortImageBlocData(img: ImageSource.beauti2, text: 'Очищение2'),
+  ];
+
+  static const String categoryShareTitle = 'Акции';
+  static List<CategoryItemData> cateroryShareItems = [
+    CategoryItemData(
+        img: ImageSource.share1,
+        price: '10 195 P',
+        lastPrice: '12 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.share2,
+        price: '10 195 P',
+        lastPrice: '12 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.share1,
+        price: '10 195 P',
+        lastPrice: '12 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.share2,
+        price: '10 195 P',
+        lastPrice: '12 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.share1,
+        price: '10 195 P',
+        lastPrice: '12 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+  ];
+
+  static const String categoryHitsTitle = 'Хиты';
+  static List<CategoryItemData> cateroryHitsItems = [
+    CategoryItemData(
+        img: ImageSource.hits1,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.hits2,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.hits1,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.hits2,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.hits1,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
   ];
 }

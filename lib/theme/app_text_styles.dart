@@ -50,6 +50,12 @@ class AppTextStyles {
     fontSize: 16,
     color: AppColors.blackColor,
   );
+  static const categoryItemLastPrice = TextStyle(
+      //Montserrat
+      fontWeight: FontWeight.w600,
+      fontSize: 16,
+      color: AppColors.black25Color,
+      decoration: TextDecoration.lineThrough);
   static const typeItemText = TextStyle(
     //Inter
     fontWeight: FontWeight.w600,

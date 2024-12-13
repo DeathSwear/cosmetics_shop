@@ -3,9 +3,11 @@ class CategoryItemData {
   final String price;
   final String type;
   final String name;
+  final String? lastPrice;
   CategoryItemData(
       {required this.img,
       required this.price,
       required this.name,
-      required this.type});
+      required this.type,
+      this.lastPrice});
 }

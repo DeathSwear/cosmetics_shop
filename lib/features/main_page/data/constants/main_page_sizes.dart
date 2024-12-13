@@ -19,4 +19,5 @@ class MainPageSizes {
   static const double categoryGradientHeight = 4;
   static const double mattButtonHeight = 40;
   static const double beautiMattButtonWidth = 118;
+  static const double shareImageSize = 25;
 }

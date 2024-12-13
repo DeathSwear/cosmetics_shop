@@ -15,6 +15,7 @@ class MainPagePaddings {
   static const double categoryItemTypeBottom = 1.85;
   static const double categoryItemNameBottom = 8;
   static const double categoryBottom = 40;
+  static const double categoryItemPriceRight = 8;
   static const double beautiTitleBottom = 23;
   static const double typeImageBottom = 10;
   static const double beautiTypeBottom = 23;
@@ -23,4 +24,6 @@ class MainPagePaddings {
   static const double beautiInsideTop = 26;
   static const double beautiLeft = 22;
   static const double beautiRight = 16;
+  static const double beautiBottom = 40;
+  static const double shareImage = 8;
 }
