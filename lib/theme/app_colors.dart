@@ -14,4 +14,6 @@ class AppColors {
     Color.fromRGBO(150, 124, 253, 1),
     Color.fromRGBO(83, 45, 106, 1),
   ], begin: Alignment.centerLeft, end: Alignment.centerRight);
+
+  static const mattButtonColor = Color.fromRGBO(43, 43, 43, 1);
 }

@@ -5,6 +5,7 @@ import 'package:cosmetics_shop/features/main_page/data/constants/main_page_paddi
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_sizes.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/other_main_page_constants.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/category.dart';
+import 'package:cosmetics_shop/features/main_page/widgets/home_care_section.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/slide_placeholder.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/sort_block_slider.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
@@ -108,6 +109,11 @@ class MainScreenState extends State<MainScreen> {
               tag: 'Новинки',
               data: OtherMainPageConstants.cateroryNewItems,
               gradient: AppColors.purpleGradient),
+          HomeCareSection(
+            text: OtherMainPageConstants.beautiText,
+            title: OtherMainPageConstants.beautiTitle,
+            data: OtherMainPageConstants.beautiSliderData,
+          ),
           Container(
             height: 40,
             color: Colors.green,

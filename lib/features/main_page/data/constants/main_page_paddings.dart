@@ -17,6 +17,10 @@ class MainPagePaddings {
   static const double categoryBottom = 40;
   static const double beautiTitleBottom = 23;
   static const double typeImageBottom = 10;
-  static const double beautiTypeBorrom = 23;
+  static const double beautiTypeBottom = 23;
   static const double sliderIndicatorHorizontal = 2;
+  static const double beautiInsideBottom = 19;
+  static const double beautiInsideTop = 26;
+  static const double beautiLeft = 22;
+  static const double beautiRight = 16;
 }

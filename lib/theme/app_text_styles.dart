@@ -50,4 +50,22 @@ class AppTextStyles {
     fontSize: 16,
     color: AppColors.blackColor,
   );
+  static const typeItemText = TextStyle(
+    //Inter
+    fontWeight: FontWeight.w600,
+    fontSize: 12,
+    color: AppColors.blackColor,
+  );
+  static const beautiTitle = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w700,
+    fontSize: 16,
+    color: AppColors.blackColor,
+  );
+  static const beautiText = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w500,
+    fontSize: 13,
+    color: AppColors.blackColor,
+  );
 }

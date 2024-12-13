@@ -3,8 +3,8 @@ import 'package:cosmetics_shop/features/main_page/data/constants/main_page_sizes
 import 'package:cosmetics_shop/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class SortImageBlock extends StatelessWidget {
-  const SortImageBlock(
+class HomeCareTypeItem extends StatelessWidget {
+  const HomeCareTypeItem(
       {super.key,
       required this.onPressed,
       required this.text,
@@ -23,18 +23,18 @@ class SortImageBlock extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.asset(
-              height: MainPageSizes.sortImageSize,
-              width: MainPageSizes.sortImageSize,
+              height: MainPageSizes.typeImageHeight,
+              width: MainPageSizes.typeImageWidth,
               img,
               fit: BoxFit.cover,
             ),
           ),
           const SizedBox(
-            height: MainPagePaddings.sortImageBottom,
+            height: MainPagePaddings.typeImageBottom,
           ),
           Text(
             text,
-            style: AppTextStyles.sortBlockText,
+            style: AppTextStyles.typeItemText,
           )
         ],
       ),
