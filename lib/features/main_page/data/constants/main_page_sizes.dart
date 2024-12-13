@@ -4,8 +4,10 @@ class MainPageSizes {
   static const double sliderHeightScale = 359 / screenHeight;
   static const double sliderWidthScale = 375 / screenWidth;
   static const double sortImageSize = 72;
-  static const double categoryImageHeight = 188;
-  static const double categoryImageWidth = 162;
+  static const double categoryImageSectionHeight = 188;
+  static const double categoryImageSectionWidth = 162;
+  static const double categoryImageHeight = 155;
+  static const double categoryImageWidth = 113;
   static const double categoryHeight = 280;
   static const double typeImageHeight = 72;
   static const double typeImageWidth = 81;

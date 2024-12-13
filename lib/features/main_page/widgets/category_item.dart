@@ -1,6 +1,7 @@
 import 'package:cosmetics_shop/features/main_page/data/classes/category_data.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_paddings.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_sizes.dart';
+import 'package:cosmetics_shop/theme/app_colors.dart';
 import 'package:cosmetics_shop/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -14,17 +15,24 @@ class CategoryItem extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: SizedBox(
-        width: MainPageSizes.categoryImageWidth,
+        width: MainPageSizes.categoryImageSectionWidth,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Image.asset(
-                height: MainPageSizes.categoryImageHeight,
-                width: MainPageSizes.categoryImageWidth,
-                data.img,
-                fit: BoxFit.cover,
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              height: MainPageSizes.categoryImageSectionHeight,
+              width: MainPageSizes.categoryImageSectionWidth,
+              decoration: BoxDecoration(
+                color: AppColors.whiteGray,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  data.img,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             const SizedBox(

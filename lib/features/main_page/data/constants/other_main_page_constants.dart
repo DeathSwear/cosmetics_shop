@@ -35,29 +35,29 @@ class OtherMainPageConstants {
     SortImageBlocData(img: ImageSource.slider1, text: 'Для ногтей'),
   ];
 
-  static List<CategoryItemData> cateroryItems = [
+  static List<CategoryItemData> cateroryNewItems = [
     CategoryItemData(
-        img: ImageSource.slider1,
+        img: ImageSource.new1,
         price: '10 195 P',
         name: 'Unstress Total Serenity Serum',
         type: 'Сыворотка'),
     CategoryItemData(
-        img: ImageSource.slider1,
+        img: ImageSource.new2,
         price: '10 195 P',
         name: 'Unstress Total Serenity Serum',
         type: 'Сыворотка'),
     CategoryItemData(
-        img: ImageSource.slider1,
+        img: ImageSource.new2,
         price: '10 195 P',
         name: 'Unstress Total Serenity Serum',
         type: 'Сыворотка'),
     CategoryItemData(
-        img: ImageSource.slider1,
+        img: ImageSource.new1,
         price: '10 195 P',
         name: 'Unstress Total Serenity Serum',
         type: 'Сыворотка'),
     CategoryItemData(
-        img: ImageSource.slider1,
+        img: ImageSource.new1,
         price: '10 195 P',
         name: 'Unstress Total Serenity Serum',
         type: 'Сыворотка'),

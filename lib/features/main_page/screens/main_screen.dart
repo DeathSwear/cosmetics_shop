@@ -106,7 +106,7 @@ class MainScreenState extends State<MainScreen> {
           const SortBlockSlider(),
           Category(
               tag: 'Новинки',
-              data: OtherMainPageConstants.cateroryItems,
+              data: OtherMainPageConstants.cateroryNewItems,
               gradient: AppColors.purpleGradient),
           Container(
             height: 40,
