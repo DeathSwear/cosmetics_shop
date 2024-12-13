@@ -26,4 +26,28 @@ class AppTextStyles {
     fontSize: 12,
     color: AppColors.blackColor,
   );
+  static const categoryTitle = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w600,
+    fontSize: 20,
+    color: AppColors.blackColor,
+  );
+  static const categoryItemType = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w500,
+    fontSize: 11.58,
+    color: AppColors.black80Color,
+  );
+  static const categoryItemName = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    color: AppColors.blackColor,
+  );
+  static const categoryItemPrice = TextStyle(
+    //Montserrat
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    color: AppColors.blackColor,
+  );
 }

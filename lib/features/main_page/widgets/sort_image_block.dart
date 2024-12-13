@@ -14,23 +14,26 @@ class SortImageBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(12),
-          child: Image.asset(
-            height: MainPageSizes.sortImageSize,
-            width: MainPageSizes.sortImageSize,
-            img,
-            fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.asset(
+              height: MainPageSizes.sortImageSize,
+              width: MainPageSizes.sortImageSize,
+              img,
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        Text(
-          text,
-          style: AppTextStyles.sortBlockText,
-        )
-      ],
+          Text(
+            text,
+            style: AppTextStyles.sortBlockText,
+          )
+        ],
+      ),
     );
   }
 }

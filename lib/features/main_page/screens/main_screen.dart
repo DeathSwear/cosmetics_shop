@@ -4,6 +4,7 @@ import 'package:cosmetics_shop/features/main_page/data/classes/slider_data.dart'
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_paddings.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_sizes.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/other_main_page_constants.dart';
+import 'package:cosmetics_shop/features/main_page/widgets/category.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/slide_placeholder.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/sort_block_slider.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
@@ -60,60 +61,62 @@ class MainScreenState extends State<MainScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      body: Expanded(
-        child: ListView(
-          children: [
-            Stack(
-              children: [
-                SizedBox(
-                    height: maxHeight * MainPageSizes.sliderHeightScale,
-                    child: PageView.builder(
-                        controller: _pageController,
-                        onPageChanged: (value) {
-                          setState(() {
-                            _activePage = value;
-                          });
-                        },
-                        itemCount: sliderData.length,
-                        itemBuilder: (context, index) {
-                          return _pages[index];
-                        })),
-                Positioned(
-                  left: MainPagePaddings.slideIndicatorLeft,
-                  top: MainPagePaddings.top,
-                  child: Container(
-                    color: Colors.transparent,
-                    child: Row(
-                      children: List<Widget>.generate(
-                        _pages.length,
-                        (index) => Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal:
-                                    MainPagePaddings.sliderIndicatorHorizontal),
-                            child: CircleAvatar(
-                              radius: MainPageSizes.sliderIndicatorRadius,
-                              backgroundColor: _activePage == index
-                                  ? AppColors.whiteColor
-                                  : AppColors.white05Color,
-                            )),
-                      ),
+      body: ListView(
+        children: [
+          Stack(
+            children: [
+              SizedBox(
+                  height: maxHeight * MainPageSizes.sliderHeightScale,
+                  child: PageView.builder(
+                      controller: _pageController,
+                      onPageChanged: (value) {
+                        setState(() {
+                          _activePage = value;
+                        });
+                      },
+                      itemCount: sliderData.length,
+                      itemBuilder: (context, index) {
+                        return _pages[index];
+                      })),
+              Positioned(
+                left: MainPagePaddings.slideIndicatorLeft,
+                top: MainPagePaddings.top,
+                child: Container(
+                  color: Colors.transparent,
+                  child: Row(
+                    children: List<Widget>.generate(
+                      _pages.length,
+                      (index) => Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal:
+                                  MainPagePaddings.sliderIndicatorHorizontal),
+                          child: CircleAvatar(
+                            radius: MainPageSizes.sliderIndicatorRadius,
+                            backgroundColor: _activePage == index
+                                ? AppColors.whiteColor
+                                : AppColors.white05Color,
+                          )),
                     ),
                   ),
-                )
-              ],
-            ),
-            const SizedBox(height: MainPagePaddings.sliderBottom),
-            const SortBlockSlider(),
-            Container(
-              height: 40,
-              color: Colors.green,
-            ),
-            Container(
-              height: 280,
-              color: Colors.blue,
-            ),
-          ],
-        ),
+                ),
+              )
+            ],
+          ),
+          const SizedBox(height: MainPagePaddings.sliderBottom),
+          const SortBlockSlider(),
+          Category(
+              tag: 'Новинки',
+              data: OtherMainPageConstants.cateroryItems,
+              gradient: AppColors.purpleGradient),
+          Container(
+            height: 40,
+            color: Colors.green,
+          ),
+          Container(
+            height: 280,
+            color: Colors.blue,
+          ),
+        ],
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:cosmetics_shop/features/main_page/data/classes/category_data.dart';
 import 'package:cosmetics_shop/features/main_page/data/classes/slider_data.dart';
 import 'package:cosmetics_shop/features/main_page/data/classes/sort_image_bloc_data.dart';
 import 'package:cosmetics_shop/theme/image_source.dart';
@@ -27,9 +28,38 @@ class OtherMainPageConstants {
 
   static List<SortImageBlocData> sortBlocSliderData = [
     SortImageBlocData(img: ImageSource.slider1, text: 'Наборы'),
-    SortImageBlocData(img: ImageSource.slider1, text: 'Наборы'),
-    SortImageBlocData(img: ImageSource.slider1, text: 'Наборы'),
-    SortImageBlocData(img: ImageSource.slider1, text: 'Наборы'),
-    SortImageBlocData(img: ImageSource.slider1, text: 'Наборы'),
+    SortImageBlocData(img: ImageSource.slider1, text: 'Для лица'),
+    SortImageBlocData(img: ImageSource.slider1, text: 'Для глаз'),
+    SortImageBlocData(img: ImageSource.slider1, text: 'Для тела'),
+    SortImageBlocData(img: ImageSource.slider1, text: 'Умывашки'),
+    SortImageBlocData(img: ImageSource.slider1, text: 'Для ногтей'),
+  ];
+
+  static List<CategoryItemData> cateroryItems = [
+    CategoryItemData(
+        img: ImageSource.slider1,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.slider1,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.slider1,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.slider1,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
+    CategoryItemData(
+        img: ImageSource.slider1,
+        price: '10 195 P',
+        name: 'Unstress Total Serenity Serum',
+        type: 'Сыворотка'),
   ];
 }
