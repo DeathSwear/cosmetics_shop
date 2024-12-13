@@ -1,4 +1,6 @@
 class MainPagePaddings {
+  static const double top = 50;
+  static const double slideIndicatorLeft = 18;
   static const double left = 15;
   static const double sliderInsideBottom = 29;
   static const double sliderInsideLeft = 24;
@@ -16,4 +18,5 @@ class MainPagePaddings {
   static const double beautiTitleBottom = 23;
   static const double typeImageBottom = 10;
   static const double beautiTypeBorrom = 23;
+  static const double sliderIndicatorHorizontal = 2;
 }

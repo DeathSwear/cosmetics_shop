@@ -8,4 +8,7 @@ class MainPageSizes {
   static const double categoryImageScale = 375 / screenWidth;
   static const double typeImageHeight = 72;
   static const double typeImageWidth = 81;
+  static const double sliderButtonWidth = 120;
+  static const double sliderButtonHeight = 36;
+  static const double sliderIndicatorRadius = 4;
 }

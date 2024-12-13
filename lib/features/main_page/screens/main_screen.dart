@@ -1,9 +1,11 @@
 import 'dart:async';
 
 import 'package:cosmetics_shop/features/main_page/data/classes/slider_data.dart';
+import 'package:cosmetics_shop/features/main_page/data/constants/main_page_paddings.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_sizes.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/other_main_page_constants.dart';
-import 'package:cosmetics_shop/features/main_page/widgets/image_placeholder.dart';
+import 'package:cosmetics_shop/features/main_page/widgets/slide_placeholder.dart';
+import 'package:cosmetics_shop/features/main_page/widgets/sort_block_slider.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +47,7 @@ class MainScreenState extends State<MainScreen> {
     super.initState();
     _pages = List.generate(
         sliderData.length,
-        (index) => ImagePlaceholder(
+        (index) => SlidePlaceholder(
               data: sliderData[index],
             ));
     startTimer();
@@ -76,28 +78,32 @@ class MainScreenState extends State<MainScreen> {
                         itemBuilder: (context, index) {
                           return _pages[index];
                         })),
-                Container(
-                  color: Colors.transparent,
-                  child: Row(
-                    children: List<Widget>.generate(
-                      _pages.length,
-                      (index) => Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 2),
-                          child: CircleAvatar(
-                            radius: 4,
-                            backgroundColor: _activePage == index
-                                ? Colors.yellow
-                                : Colors.yellow.withOpacity(0.5),
-                          )),
+                Positioned(
+                  left: MainPagePaddings.slideIndicatorLeft,
+                  top: MainPagePaddings.top,
+                  child: Container(
+                    color: Colors.transparent,
+                    child: Row(
+                      children: List<Widget>.generate(
+                        _pages.length,
+                        (index) => Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal:
+                                    MainPagePaddings.sliderIndicatorHorizontal),
+                            child: CircleAvatar(
+                              radius: MainPageSizes.sliderIndicatorRadius,
+                              backgroundColor: _activePage == index
+                                  ? AppColors.whiteColor
+                                  : AppColors.white05Color,
+                            )),
+                      ),
                     ),
                   ),
                 )
               ],
             ),
-            Container(
-              height: 95 + 25 + 25,
-              color: Colors.yellow,
-            ),
+            const SizedBox(height: MainPagePaddings.sliderBottom),
+            const SortBlockSlider(),
             Container(
               height: 40,
               color: Colors.green,

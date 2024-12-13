@@ -1,12 +1,14 @@
 import 'package:cosmetics_shop/features/main_page/data/classes/slider_data.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_paddings.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/main_page_sizes.dart';
+import 'package:cosmetics_shop/features/main_page/data/constants/other_main_page_constants.dart';
+import 'package:cosmetics_shop/features/main_page/widgets/opacity_button.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
 import 'package:cosmetics_shop/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class ImagePlaceholder extends StatelessWidget {
-  const ImagePlaceholder({super.key, required this.data});
+class SlidePlaceholder extends StatelessWidget {
+  const SlidePlaceholder({super.key, required this.data});
   final SliderData data;
   @override
   Widget build(BuildContext context) {
@@ -44,14 +46,12 @@ class ImagePlaceholder extends StatelessWidget {
           ),
         ),
         Positioned(
-          bottom: MainPagePaddings.sliderInsideBottom,
-          right: MainPagePaddings.sliderInsideRight,
-          child: Container(
-            color: Colors.amber,
-            height: 36,
-            width: 120,
-          ),
-        )
+            bottom: MainPagePaddings.sliderInsideBottom,
+            right: MainPagePaddings.sliderInsideRight,
+            child: OpacityButton(
+              text: OtherMainPageConstants.opacityButtonText,
+              onPressed: () {},
+            ))
       ],
     );
   }
