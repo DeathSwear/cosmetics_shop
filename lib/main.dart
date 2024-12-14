@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:cosmetics_shop/features/main_page/screens/main_screen.dart';
+import 'package:cosmetics_shop/features/navigation/widgets/scaffold_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer';
 
@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MainScreen(),
+      home: ScaffoldNavBar(),
     );
   }
 }

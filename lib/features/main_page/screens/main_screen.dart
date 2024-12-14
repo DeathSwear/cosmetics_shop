@@ -59,11 +59,10 @@ class MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     double maxHeight = MediaQuery.of(context).size.height;
-    double maxWidth = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
-      body: ListView(
+    return Container(
+      color: AppColors.backgroundColor,
+      child: ListView(
         children: [
           Stack(
             children: [

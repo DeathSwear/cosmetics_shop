@@ -80,4 +80,16 @@ class AppTextStyles {
     fontSize: 14,
     color: AppColors.blackColor,
   );
+  static const navTextActive = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w500,
+    fontSize: 10,
+    color: AppColors.blackColor,
+  );
+  static const navTextDisable = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w500,
+    fontSize: 10,
+    color: AppColors.disableGray,
+  );
 }

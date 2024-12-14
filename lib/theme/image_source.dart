@@ -14,4 +14,9 @@ class ImageSource {
   static const String beauti2 = 'assets/png/beauti2.png';
   static const String beauti3 = 'assets/png/beauti3.png';
   static const String beauti4 = 'assets/png/beauti4.png';
+
+  static const String userBarIcon = 'assets/png/User.png';
+  static const String shoppingBarIcon = 'assets/png/ShoppingCartSimple.png';
+  static const String houseBarIcon = 'assets/png/House.png';
+  static const String glassBarIcon = 'assets/png/MagnifyingGlass.png';
 }

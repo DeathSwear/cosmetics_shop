@@ -24,4 +24,5 @@ class AppColors {
   ], begin: Alignment.centerLeft, end: Alignment.centerRight);
 
   static const mattButtonColor = Color.fromRGBO(43, 43, 43, 1);
+  static const disableGray = Color.fromRGBO(112, 117, 127, 1);
 }
