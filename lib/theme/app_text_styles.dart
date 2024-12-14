@@ -92,4 +92,10 @@ class AppTextStyles {
     fontSize: 10,
     color: AppColors.disableGray,
   );
+  static const searchText = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w500,
+    fontSize: 18,
+    color: AppColors.black50Color,
+  );
 }

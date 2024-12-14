@@ -1,3 +1,4 @@
+import 'package:cosmetics_shop/features/catalog_page/screens/catalog_screen.dart';
 import 'package:cosmetics_shop/features/main_page/screens/main_screen.dart';
 import 'package:cosmetics_shop/features/navigation/data/constants/navigation_paddings.dart';
 import 'package:cosmetics_shop/features/navigation/data/constants/navigation_sizes.dart';
@@ -19,7 +20,7 @@ class _ScaffoldNavBarState extends State<ScaffoldNavBar> {
 
   final List<Widget> body = [
     const MainScreen(),
-    const Text('b'),
+    const CatalogScreen(),
     const Text('c'),
     const Text('d'),
   ];

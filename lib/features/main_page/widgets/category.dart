@@ -36,8 +36,7 @@ class Category extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height:
-              MainPageSizes.categoryHeight + MainPagePaddings.categoryBottom,
+          height: MainPageSizes.categoryHeight,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => Padding(
@@ -54,6 +53,9 @@ class Category extends StatelessWidget {
             itemCount: data.length,
           ),
         ),
+        const SizedBox(
+          height: MainPagePaddings.categoryBottom,
+        )
       ],
     );
   }

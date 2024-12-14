@@ -3,4 +3,5 @@ class AppStrings {
   static const navBarGlass = 'Каталог';
   static const navBarShopping = 'Корзина';
   static const navBarProfile = 'Профиль';
+  static const find = 'Поиск';
 }
