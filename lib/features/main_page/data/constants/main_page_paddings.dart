@@ -28,4 +28,5 @@ class MainPagePaddings {
   static const double shareImage = 8;
   static const double borderButtonBottom = 8;
   static const double borderButtonSectionHorizontal = 16;
+  static const double categoryAdditionalPadding = 23;
 }

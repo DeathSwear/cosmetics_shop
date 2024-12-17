@@ -98,4 +98,16 @@ class AppTextStyles {
     fontSize: 18,
     color: AppColors.black50Color,
   );
+  static const searchPageText = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w600,
+    fontSize: 20,
+    color: AppColors.blackColor,
+  );
+  static const searchPageTypeText = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w600,
+    fontSize: 18,
+    color: AppColors.blackColor,
+  );
 }
