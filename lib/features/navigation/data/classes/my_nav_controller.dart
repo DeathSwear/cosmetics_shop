@@ -33,14 +33,20 @@ class MyNavController {
     _currentRoutes.add(temp);
   }
 
-  void push({required String route}) {
+  void push({required String route, required Widget page}) {
+    if (!_allRoutes.containsKey(route)) {
+      _allRoutes[route] = page;
+    }
     _currentRoutes[_currentRouteIndex].push(route);
     currentRouteNotifier.value = route;
   }
 
   void pop() {
-    _currentRoutes[_currentRouteIndex].pop();
-    currentRouteNotifier.value = getCurrentRoute();
+    String poppedRoute = getCurrentRoute();
+    if (_currentRoutes[_currentRouteIndex].pop()) {
+      _allRoutes.remove(poppedRoute);
+      currentRouteNotifier.value = getCurrentRoute();
+    }
   }
 
   void goTo({required String route}) {

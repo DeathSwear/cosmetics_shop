@@ -1,3 +1,4 @@
+import 'package:cosmetics_shop/features/catalog_page/data/classes/search_text_data.dart';
 import 'package:cosmetics_shop/features/catalog_page/data/constants/catalog_page_paddings.dart';
 import 'package:cosmetics_shop/features/catalog_page/data/constants/catalog_page_sizes.dart';
 import 'package:cosmetics_shop/features/catalog_page/widgets/custom_search_bar.dart';
@@ -9,18 +10,16 @@ import 'package:cosmetics_shop/theme/image_source.dart';
 import 'package:flutter/material.dart';
 
 class CatalogSelectScreen extends StatefulWidget {
-  const CatalogSelectScreen({super.key});
+  const CatalogSelectScreen({
+    super.key,
+    required this.data,
+  });
+  final SearchTextData data;
   @override
   CatalogSelectScreenState createState() => CatalogSelectScreenState();
 }
 
 class CatalogSelectScreenState extends State<CatalogSelectScreen> {
-  void popPage(MyNavController navigationController) {
-    //setState(() {
-    navigationController.pop();
-    //});
-  }
-
   @override
   Widget build(BuildContext context) {
     final MyNavController navigationController =
@@ -32,13 +31,13 @@ class CatalogSelectScreenState extends State<CatalogSelectScreen> {
         child: SafeArea(
           child: ListView(
             children: [
-              Text('data'),
-              Text('data'),
-              Text('data'),
+              Text(widget.data.text),
+              Text(widget.data.title),
+              Text(widget.data.items[0]),
               Text('data'),
               Text('data'),
               TextButton(
-                  onPressed: () => popPage(navigationController),
+                  onPressed: () => navigationController.pop(),
                   child: Text('!!!!back!!!!'))
             ],
           ),

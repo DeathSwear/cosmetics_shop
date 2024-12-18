@@ -14,10 +14,12 @@ class StackForNav<T> {
     _stack.addLast(element);
   }
 
-  void pop() {
+  bool pop() {
     if (canPop()) {
       _stack.removeLast();
+      return true;
     }
+    return false;
   }
 
   T getMain() => _stack.first;

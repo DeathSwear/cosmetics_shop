@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:cosmetics_shop/features/catalog_page/screens/catalog_screen.dart';
-import 'package:cosmetics_shop/features/catalog_page/screens/catalog_select_screen.dart';
 import 'package:cosmetics_shop/features/main_page/screens/main_screen.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/my_nav_controller.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/navigation_provider.dart';
@@ -24,7 +23,6 @@ class MainApp extends StatelessWidget {
       routes: [
         Pair(const MainScreen(), '/mainScreen'),
         Pair(const CatalogScreen(), '/catalogScreen'),
-        Pair(const CatalogSelectScreen(), '/catalogScreen/select'),
         Pair(const Text('d'), '/test2'),
         Pair(const Text('ПРОВЕРКА'), '/test3'),
       ],
