@@ -64,11 +64,6 @@ class OtherMainPageConstants {
         type: 'Сыворотка'),
   ];
 
-  static const String beautiTitle = 'Моя схема домашнего ухода';
-  static const String beautiText =
-      'Ответьте на 10 вопросов,\nи мы подберем нужный уход';
-  static const String mattButtonText = 'Пройти тест';
-
   static List<SortImageBlocData> beautiSliderData = [
     SortImageBlocData(img: ImageSource.beauti1, text: 'Демакияж'),
     SortImageBlocData(img: ImageSource.beauti2, text: 'Очищение'),

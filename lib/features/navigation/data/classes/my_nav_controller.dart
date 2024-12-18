@@ -21,8 +21,8 @@ class MyNavController {
   void configure(List<Pair<Widget, String>> routes) {
     for (Pair<Widget, String> i in routes) {
       _allRoutes[i.second] = i.first;
+      addPage(route: i.second);
     }
-    addPage(route: routes[0].second);
     _currentRouteIndex = 0;
     currentRouteNotifier.value = routes[0].second;
   }

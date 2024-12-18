@@ -19,4 +19,6 @@ class ImageSource {
   static const String shoppingBarIcon = 'assets/png/ShoppingCartSimple.png';
   static const String houseBarIcon = 'assets/png/House.png';
   static const String glassBarIcon = 'assets/png/MagnifyingGlass.png';
+
+  static const String sharePink = 'assets/png/share_pink.png';
 }

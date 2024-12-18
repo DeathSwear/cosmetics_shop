@@ -10,6 +10,7 @@ import 'package:cosmetics_shop/features/main_page/widgets/home_care_section.dart
 import 'package:cosmetics_shop/features/main_page/widgets/slide_placeholder.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/sort_block_slider.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
+import 'package:cosmetics_shop/theme/app_strings.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -110,8 +111,8 @@ class MainScreenState extends State<MainScreen> {
               data: OtherMainPageConstants.cateroryNewItems,
               gradient: AppColors.greenGradient),
           HomeCareSection(
-            text: OtherMainPageConstants.beautiText,
-            title: OtherMainPageConstants.beautiTitle,
+            text: AppStrings.beautiSectionText1,
+            title: AppStrings.beautiSectionTitle1,
             data: OtherMainPageConstants.beautiSliderData,
           ),
           const SizedBox(height: MainPagePaddings.beautiBottom),
