@@ -11,4 +11,12 @@ class CatalogPagePaddings {
   static const double homeCareTextBottom = 16;
   static const double basicTop = 16;
   static const double backTitleBottom = 24;
+  static const double sortedScreenTitleTop = 12;
+  static const double sortedScreenTitleBottom = 16;
+  static const double chipsSectionTop = 16;
+  static const double chipsSectionBottom = 30;
+  static const double chipTextVertical = 8.5;
+  static const double chipTextHorizontal = 16;
+  static const double chipHeight = 44;
+  static const double catalogItemRight = 19;
 }

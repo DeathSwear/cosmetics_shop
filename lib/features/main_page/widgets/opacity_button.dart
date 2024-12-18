@@ -16,7 +16,7 @@ class OpacityButton extends StatelessWidget {
         border: Border.all(color: AppColors.whiteColor, width: 1),
       ),
       child: TextButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: TextButton.styleFrom(
             elevation: 0,
             alignment: Alignment.center,

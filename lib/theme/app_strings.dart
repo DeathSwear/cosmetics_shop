@@ -12,4 +12,5 @@ class AppStrings {
       'Составим схему идеального домашнего ухода';
 
   static const beautiSectionText2 = '10 вопросов о вашей коже';
+  static const xProducts = 'продуктов';
 }

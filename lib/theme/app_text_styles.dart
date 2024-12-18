@@ -116,4 +116,28 @@ class AppTextStyles {
     fontSize: 20,
     color: AppColors.blackColor,
   );
+  static const sortedScreenTitle = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w600,
+    fontSize: 24,
+    color: AppColors.blackColor,
+  );
+  static const sortedScreenProductsCount = TextStyle(
+    //Montserrat
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+    color: AppColors.blackColor,
+  );
+  static const chipActive = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+    color: AppColors.whiteColor,
+  );
+  static const chipInactive = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+    color: AppColors.blackColor,
+  );
 }

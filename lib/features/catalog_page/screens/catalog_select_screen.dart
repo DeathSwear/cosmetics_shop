@@ -1,6 +1,7 @@
 import 'package:cosmetics_shop/features/catalog_page/data/classes/search_text_data.dart';
 import 'package:cosmetics_shop/features/catalog_page/data/constants/catalog_page_paddings.dart';
 import 'package:cosmetics_shop/features/catalog_page/data/constants/catalog_page_sizes.dart';
+import 'package:cosmetics_shop/features/catalog_page/screens/catalog_sorted_assortment_screen.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/my_nav_controller.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/navigation_provider.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
@@ -18,12 +19,27 @@ class CatalogSelectScreen extends StatefulWidget {
 }
 
 class CatalogSelectScreenState extends State<CatalogSelectScreen> {
-  List<Widget> getTextList() {
+  void pushToSortedAssortmentScreen(
+      MyNavController navigationController, String data) {
+    navigationController.push(
+        route: '/catalogScreen/select/assortment',
+        page: CatalogSortedAssortmentScreen(
+          someData: data,
+        ));
+  }
+
+  List<Widget> getTextList(MyNavController navigationController) {
     List<Widget> temp = [];
     for (int i = 0; i < widget.data.items.length; i++) {
-      temp.add(Text(
-        widget.data.items[i],
-        style: AppTextStyles.searchPageTypeText,
+      temp.add(GestureDetector(
+        onTap: () {
+          pushToSortedAssortmentScreen(
+              navigationController, 'some information');
+        },
+        child: Text(
+          widget.data.items[i],
+          style: AppTextStyles.searchPageTypeText,
+        ),
       ));
       temp.add(const SizedBox(height: CatalogPagePaddings.searchTextBottom));
     }
@@ -73,7 +89,7 @@ class CatalogSelectScreenState extends State<CatalogSelectScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      ...getTextList(),
+                      ...getTextList(navigationController),
                     ],
                   ),
                 ),

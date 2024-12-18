@@ -16,7 +16,7 @@ class MattButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: TextButton.styleFrom(
           elevation: 0,
           alignment: Alignment.center,

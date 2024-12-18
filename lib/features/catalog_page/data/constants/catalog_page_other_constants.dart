@@ -47,4 +47,5 @@ class CatalogPageOtherConstants {
     'Проблема3',
     'Проблема4'
   ];
+  static const String sortedScreenTitle = 'Средства \nдля жирной кожи';
 }

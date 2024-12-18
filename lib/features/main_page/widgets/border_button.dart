@@ -19,7 +19,7 @@ class BorderButton extends StatelessWidget {
             Border.all(color: AppColors.blackColor.withOpacity(0.1), width: 1),
       ),
       child: TextButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: TextButton.styleFrom(
             elevation: 0,
             alignment: Alignment.center,

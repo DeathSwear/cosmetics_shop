@@ -21,4 +21,5 @@ class ImageSource {
   static const String glassBarIcon = 'assets/png/MagnifyingGlass.png';
 
   static const String sharePink = 'assets/png/share_pink.png';
+  static const String optionsHorizontal = 'assets/png/FadersHorizontal.png';
 }

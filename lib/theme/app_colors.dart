@@ -26,4 +26,6 @@ class AppColors {
 
   static const mattButtonColor = Color.fromRGBO(43, 43, 43, 1);
   static const disableGray = Color.fromRGBO(112, 117, 127, 1);
+
+  static const chipActive = Color.fromRGBO(23, 23, 23, 1);
 }
