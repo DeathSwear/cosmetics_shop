@@ -2,7 +2,8 @@ import 'package:cosmetics_shop/features/catalog_page/data/classes/search_text_da
 
 class CatalogPageOtherConstants {
   static List<SearchTextData> searchTextDataExamples = [
-    SearchTextData(text: 'Назначение', title: 'По назначению', items: ['']),
+    SearchTextData(
+        text: 'Назначение', title: 'По назначению', items: assignment),
     SearchTextData(
         text: 'Тип средства', title: 'По типу средства', items: typeOfProduct),
     SearchTextData(text: 'Тип кожи', title: 'По типу кожи', items: skinType),

@@ -9,4 +9,6 @@ class CatalogPagePaddings {
   static const double homeCareVertical = 24;
   static const double homeCareTextTop = 12;
   static const double homeCareTextBottom = 16;
+  static const double basicTop = 16;
+  static const double backTitleBottom = 24;
 }

@@ -110,4 +110,10 @@ class AppTextStyles {
     fontSize: 18,
     color: AppColors.blackColor,
   );
+  static const searchPageTitle = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w700,
+    fontSize: 20,
+    color: AppColors.blackColor,
+  );
 }
