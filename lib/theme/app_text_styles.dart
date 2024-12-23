@@ -2,158 +2,163 @@ import 'package:cosmetics_shop/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
+  static const fontFamilyInter = 'Inter';
+  static const fontFamilyMontserrat = 'Montserrat';
+  static const fontFamilyRaleway = 'Raleway';
+  static const fontFamilyVelaSans = 'VelaSans';
+
   static const sliderTitle = TextStyle(
-    //Vela Sans
+    fontFamily: fontFamilyVelaSans,
     fontWeight: FontWeight.w600,
     fontSize: 35,
     color: AppColors.whiteColor,
   );
   static const sliderSubTitle = TextStyle(
-    //Vela Sans
+    fontFamily: fontFamilyVelaSans,
     fontWeight: FontWeight.w400,
     fontSize: 16,
     color: AppColors.whiteColor,
   );
   static const opacityButton = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w600,
     fontSize: 12,
     color: AppColors.whiteColor,
   );
   static const sortBlockText = TextStyle(
-    //Inter
+    fontFamily: fontFamilyInter,
     fontWeight: FontWeight.w500,
     fontSize: 12,
     color: AppColors.blackColor,
   );
   static const categoryTitle = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w600,
     fontSize: 20,
     color: AppColors.blackColor,
   );
   static const categoryItemType = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w500,
     fontSize: 11.58,
     color: AppColors.black80Color,
   );
   static const categoryItemName = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w600,
     fontSize: 14,
     color: AppColors.blackColor,
   );
   static const categoryItemPrice = TextStyle(
-    //Montserrat
+    fontFamily: fontFamilyMontserrat,
     fontWeight: FontWeight.w600,
     fontSize: 16,
     color: AppColors.blackColor,
   );
   static const categoryItemLastPrice = TextStyle(
-      //Montserrat
+      fontFamily: fontFamilyMontserrat,
       fontWeight: FontWeight.w600,
       fontSize: 16,
       color: AppColors.black25Color,
       decoration: TextDecoration.lineThrough);
   static const typeItemText = TextStyle(
-    //Inter
+    fontFamily: fontFamilyInter,
     fontWeight: FontWeight.w600,
     fontSize: 12,
     color: AppColors.blackColor,
   );
   static const beautiTitle = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w700,
     fontSize: 16,
     color: AppColors.blackColor,
   );
   static const beautiText = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w500,
     fontSize: 13,
     color: AppColors.blackColor,
   );
   static const borderButton = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w500,
     fontSize: 14,
     color: AppColors.blackColor,
   );
   static const navTextActive = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w500,
     fontSize: 10,
     color: AppColors.blackColor,
   );
   static const navTextDisable = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w500,
     fontSize: 10,
     color: AppColors.disableGray,
   );
   static const searchText = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w500,
     fontSize: 18,
     color: AppColors.black50Color,
   );
   static const searchPageText = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w600,
     fontSize: 20,
     color: AppColors.blackColor,
   );
   static const searchPageTypeText = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w600,
     fontSize: 18,
     color: AppColors.blackColor,
   );
   static const searchPageTitle = TextStyle(
-    //Raleway
-    fontWeight: FontWeight.w700,
+    fontFamily: fontFamilyRaleway,
+    fontWeight: FontWeight.w600,
     fontSize: 20,
     color: AppColors.blackColor,
   );
   static const sortedScreenTitle = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w600,
     fontSize: 24,
     color: AppColors.blackColor,
   );
   static const sortedScreenProductsCount = TextStyle(
-    //Montserrat
+    fontFamily: fontFamilyMontserrat,
     fontWeight: FontWeight.w500,
     fontSize: 16,
     color: AppColors.blackColor,
   );
   static const chipActive = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w500,
     fontSize: 14,
     color: AppColors.whiteColor,
   );
   static const chipInactive = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w500,
     fontSize: 14,
     color: AppColors.blackColor,
   );
   static const sortTitle = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w600,
     fontSize: 16,
     color: AppColors.blackColor,
   );
   static const sortDropText = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w500,
     fontSize: 14,
     color: AppColors.black50Color,
   );
   static const applyFilters = TextStyle(
-    //Raleway
+    fontFamily: fontFamilyRaleway,
     fontWeight: FontWeight.w600,
     fontSize: 16,
     color: AppColors.whiteColor,
