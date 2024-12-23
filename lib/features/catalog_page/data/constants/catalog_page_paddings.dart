@@ -22,4 +22,5 @@ class CatalogPagePaddings {
   static const double applyFiltersButtonHorizontal = 24;
   static const double sortRowBottom = 37;
   static const double sortRowBottomFirst = 47.5;
+  static const double applyFiltersButtonBottom = 8;
 }

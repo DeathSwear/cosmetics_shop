@@ -47,56 +47,52 @@ class CatalogScreenState extends State<CatalogScreen> {
     final MyNavController navigationController =
         MyNavigationProvider.of(context)!.navController;
 
-    return Scaffold(
-      body: Container(
-        color: AppColors.backgroundColor,
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.only(top: CatalogPagePaddings.basicTop),
-            child: ListView(
-              children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: CatalogPagePaddings.basicHorizontal),
-                  child: CustomSearchBar(),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: CatalogPagePaddings.basicHorizontal,
-                      top: CatalogPagePaddings.searchTextBlockTop,
-                      bottom: CatalogPagePaddings.searchTextBlockBottom),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ...getSearchTextList(navigationController),
-                      SearchText(
-                        data:
-                            CatalogPageOtherConstants.searchTextDataExamples[5],
-                        additionalIcon: Image.asset(
-                          ImageSource.sharePink,
-                          fit: BoxFit.cover,
-                          height: CatalogPageSizes.shareImageSize,
-                          width: CatalogPageSizes.shareImageSize,
-                        ),
-                        onPressed: () {},
+    return Container(
+      color: AppColors.backgroundColor,
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(top: CatalogPagePaddings.basicTop),
+          child: ListView(
+            children: [
+              const Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: CatalogPagePaddings.basicHorizontal),
+                child: CustomSearchBar(),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: CatalogPagePaddings.basicHorizontal,
+                    top: CatalogPagePaddings.searchTextBlockTop,
+                    bottom: CatalogPagePaddings.searchTextBlockBottom),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ...getSearchTextList(navigationController),
+                    SearchText(
+                      data: CatalogPageOtherConstants.searchTextDataExamples[5],
+                      additionalIcon: Image.asset(
+                        ImageSource.sharePink,
+                        fit: BoxFit.cover,
+                        height: CatalogPageSizes.shareImageSize,
+                        width: CatalogPageSizes.shareImageSize,
                       ),
-                      const SizedBox(
-                          height: CatalogPagePaddings.searchTextBottom),
-                      SearchText(
-                        data:
-                            CatalogPageOtherConstants.searchTextDataExamples[6],
-                        onPressed: () {},
-                      ),
-                    ],
-                  ),
+                      onPressed: () {},
+                    ),
+                    const SizedBox(
+                        height: CatalogPagePaddings.searchTextBottom),
+                    SearchText(
+                      data: CatalogPageOtherConstants.searchTextDataExamples[6],
+                      onPressed: () {},
+                    ),
+                  ],
                 ),
-                IdealHomeCareSection(
-                  title: AppStrings.beautiSectionTitle2,
-                  text: AppStrings.beautiSectionText2,
-                  onPressed: () {},
-                )
-              ],
-            ),
+              ),
+              IdealHomeCareSection(
+                title: AppStrings.beautiSectionTitle2,
+                text: AppStrings.beautiSectionText2,
+                onPressed: () {},
+              )
+            ],
           ),
         ),
       ),

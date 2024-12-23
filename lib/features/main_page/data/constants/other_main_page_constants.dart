@@ -27,12 +27,12 @@ class OtherMainPageConstants {
   static const String opacityButtonText = 'Перейти к акции';
 
   static List<SortImageBlocData> sortBlocSliderData = [
-    SortImageBlocData(img: ImageSource.slider1, text: 'Наборы'),
-    SortImageBlocData(img: ImageSource.slider1, text: 'Для лица'),
-    SortImageBlocData(img: ImageSource.slider1, text: 'Для глаз'),
-    SortImageBlocData(img: ImageSource.slider1, text: 'Для тела'),
-    SortImageBlocData(img: ImageSource.slider1, text: 'Умывашки'),
-    SortImageBlocData(img: ImageSource.slider1, text: 'Для ногтей'),
+    SortImageBlocData(img: ImageSource.blockSlider1, text: 'Наборы'),
+    SortImageBlocData(img: ImageSource.blockSlider2, text: 'Для лица'),
+    SortImageBlocData(img: ImageSource.blockSlider3, text: 'Для глаз'),
+    SortImageBlocData(img: ImageSource.blockSlider4, text: 'Для тела'),
+    SortImageBlocData(img: ImageSource.blockSlider1, text: 'Умывашки'),
+    SortImageBlocData(img: ImageSource.blockSlider2, text: 'Для ногтей'),
   ];
 
   static const String categoryNewTitle = 'Новинки';

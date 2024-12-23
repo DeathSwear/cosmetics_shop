@@ -100,32 +100,34 @@ class CatalogFiltersScreenState extends State<CatalogFiltersScreen> {
                       const SizedBox(
                           height: CatalogPagePaddings.backTitleBottom),
                       ...getSortList(),
-                      TextButton(
-                        onPressed: () => confirmSort(navigationController),
-                        style: TextButton.styleFrom(
-                            elevation: 0,
-                            alignment: Alignment.center,
-                            backgroundColor: AppColors.mattButtonColor,
-                            foregroundColor: Colors.transparent,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(9)),
-                            padding: EdgeInsets.zero,
-                            fixedSize: Size(
-                                maxWidth -
-                                    CatalogPagePaddings
-                                            .applyFiltersButtonHorizontal *
-                                        2,
-                                CatalogPageSizes.applyFiltersButtonHeight)),
-                        child: const Text(
-                          AppStrings.applyFilters,
-                          style: AppTextStyles.applyFilters,
-                        ),
-                      ),
                     ],
                   ),
                 ),
               ],
             ),
+          ),
+        ),
+      ),
+      bottomSheet: Padding(
+        padding: const EdgeInsets.only(
+            bottom: CatalogPagePaddings.applyFiltersButtonBottom),
+        child: TextButton(
+          onPressed: () => confirmSort(navigationController),
+          style: TextButton.styleFrom(
+              elevation: 0,
+              alignment: Alignment.center,
+              backgroundColor: AppColors.mattButtonColor,
+              foregroundColor: Colors.transparent,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(9)),
+              padding: EdgeInsets.zero,
+              fixedSize: Size(
+                  maxWidth -
+                      CatalogPagePaddings.applyFiltersButtonHorizontal * 2,
+                  CatalogPageSizes.applyFiltersButtonHeight)),
+          child: const Text(
+            AppStrings.applyFilters,
+            style: AppTextStyles.applyFilters,
           ),
         ),
       ),

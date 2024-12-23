@@ -57,101 +57,98 @@ class CatalogSortedAssortmentScreenState
     final MyNavController navigationController =
         MyNavigationProvider.of(context)!.navController;
     changeSortValues(navigationController);
-    return Scaffold(
-      body: Container(
-        color: AppColors.backgroundColor,
-        child: Padding(
-          padding: const EdgeInsets.only(top: CatalogPagePaddings.basicTop),
-          child: SafeArea(
-            child: ListView(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: CatalogPagePaddings.basicHorizontal),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      GestureDetector(
-                        onTap: () => navigationController.pop(),
-                        child: const Icon(
-                          Icons.arrow_back_ios,
-                          size: CatalogPageSizes.backIconSize,
-                        ),
+    return Container(
+      color: AppColors.backgroundColor,
+      child: Padding(
+        padding: const EdgeInsets.only(top: CatalogPagePaddings.basicTop),
+        child: SafeArea(
+          child: ListView(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: CatalogPagePaddings.basicHorizontal),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    GestureDetector(
+                      onTap: () => navigationController.pop(),
+                      child: const Icon(
+                        Icons.arrow_back_ios,
+                        size: CatalogPageSizes.backIconSize,
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(
-                            top: CatalogPagePaddings.sortedScreenTitleTop,
-                            bottom:
-                                CatalogPagePaddings.sortedScreenTitleBottom),
-                        child: Text(
-                          CatalogPageOtherConstants.sortedScreenTitle,
-                          style: AppTextStyles.sortedScreenTitle,
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            '$allItemsCount ${AppStrings.xProducts}',
-                            style: AppTextStyles.sortedScreenProductsCount,
-                          ),
-                          GestureDetector(
-                            onTap: () =>
-                                pushToFiltersScreen(navigationController),
-                            child: Image.asset(
-                              ImageSource.optionsHorizontal,
-                              fit: BoxFit.cover,
-                              height: CatalogPageSizes.shareImageSize,
-                              width: CatalogPageSizes.shareImageSize,
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                      bottom: CatalogPagePaddings.chipsSectionBottom,
-                      top: CatalogPagePaddings.chipsSectionTop),
-                  child: SizedBox(
-                    height: CatalogPagePaddings.chipHeight,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) => Padding(
-                          padding: EdgeInsets.only(
-                              right: CatalogPagePaddings.basicHorizontal,
-                              left: index == 0
-                                  ? CatalogPagePaddings.basicHorizontal
-                                  : 0),
-                          child: CustomChip(
-                              text: CatalogPageOtherConstants
-                                  .effectOfProduct[index],
-                              isCurrent: currentIndex == index ? true : false,
-                              onPressed: () {
-                                setState(() {
-                                  currentIndex = index;
-                                });
-                              })),
-                      itemCount: CatalogPageOtherConstants.typeOfProduct.length,
                     ),
+                    const Padding(
+                      padding: EdgeInsets.only(
+                          top: CatalogPagePaddings.sortedScreenTitleTop,
+                          bottom: CatalogPagePaddings.sortedScreenTitleBottom),
+                      child: Text(
+                        CatalogPageOtherConstants.sortedScreenTitle,
+                        style: AppTextStyles.sortedScreenTitle,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          '$allItemsCount ${AppStrings.xProducts}',
+                          style: AppTextStyles.sortedScreenProductsCount,
+                        ),
+                        GestureDetector(
+                          onTap: () =>
+                              pushToFiltersScreen(navigationController),
+                          child: Image.asset(
+                            ImageSource.optionsHorizontal,
+                            fit: BoxFit.cover,
+                            height: CatalogPageSizes.shareImageSize,
+                            width: CatalogPageSizes.shareImageSize,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    bottom: CatalogPagePaddings.chipsSectionBottom,
+                    top: CatalogPagePaddings.chipsSectionTop),
+                child: SizedBox(
+                  height: CatalogPagePaddings.chipHeight,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => Padding(
+                        padding: EdgeInsets.only(
+                            right: CatalogPagePaddings.basicHorizontal,
+                            left: index == 0
+                                ? CatalogPagePaddings.basicHorizontal
+                                : 0),
+                        child: CustomChip(
+                            text: CatalogPageOtherConstants
+                                .effectOfProduct[index],
+                            isCurrent: currentIndex == index ? true : false,
+                            onPressed: () {
+                              setState(() {
+                                currentIndex = index;
+                              });
+                            })),
+                    itemCount: CatalogPageOtherConstants.typeOfProduct.length,
                   ),
                 ),
-                CategoryListView(
-                  rightPadding: CatalogPagePaddings.catalogItemRight,
-                  data: OtherMainPageConstants.cateroryNewItems,
-                ),
-                CategoryListView(
-                  rightPadding: CatalogPagePaddings.catalogItemRight,
-                  data: OtherMainPageConstants.cateroryNewItems,
-                ),
-                CategoryListView(
-                  rightPadding: CatalogPagePaddings.catalogItemRight,
-                  data: OtherMainPageConstants.cateroryNewItems,
-                ),
-              ],
-            ),
+              ),
+              CategoryListView(
+                rightPadding: CatalogPagePaddings.catalogItemRight,
+                data: OtherMainPageConstants.cateroryNewItems,
+              ),
+              CategoryListView(
+                rightPadding: CatalogPagePaddings.catalogItemRight,
+                data: OtherMainPageConstants.cateroryNewItems,
+              ),
+              CategoryListView(
+                rightPadding: CatalogPagePaddings.catalogItemRight,
+                data: OtherMainPageConstants.cateroryNewItems,
+              ),
+            ],
           ),
         ),
       ),

@@ -22,4 +22,9 @@ class ImageSource {
 
   static const String sharePink = 'assets/png/share_pink.png';
   static const String optionsHorizontal = 'assets/png/FadersHorizontal.png';
+
+  static const String blockSlider1 = 'assets/png/block_slider1.png';
+  static const String blockSlider2 = 'assets/png/block_slider2.png';
+  static const String blockSlider3 = 'assets/png/block_slider3.png';
+  static const String blockSlider4 = 'assets/png/block_slider4.png';
 }

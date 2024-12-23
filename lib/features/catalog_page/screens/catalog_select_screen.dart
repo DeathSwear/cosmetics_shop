@@ -53,50 +53,48 @@ class CatalogSelectScreenState extends State<CatalogSelectScreen> {
     final MyNavController navigationController =
         MyNavigationProvider.of(context)!.navController;
 
-    return Scaffold(
-      body: Container(
-        color: AppColors.backgroundColor,
-        child: Padding(
-          padding: const EdgeInsets.only(top: CatalogPagePaddings.basicTop),
-          child: SafeArea(
-            child: ListView(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: CatalogPagePaddings.basicHorizontal),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        onTap: () => navigationController.pop(),
-                        child: const Icon(
-                          Icons.arrow_back_ios,
-                          size: CatalogPageSizes.backIconSize,
-                        ),
+    return Container(
+      color: AppColors.backgroundColor,
+      child: Padding(
+        padding: const EdgeInsets.only(top: CatalogPagePaddings.basicTop),
+        child: SafeArea(
+          child: ListView(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: CatalogPagePaddings.basicHorizontal),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () => navigationController.pop(),
+                      child: const Icon(
+                        Icons.arrow_back_ios,
+                        size: CatalogPageSizes.backIconSize,
                       ),
-                      Text(widget.data.title,
-                          style: AppTextStyles.searchPageTitle),
-                      const SizedBox(
-                        width: CatalogPageSizes.backIconSize,
-                      ),
-                    ],
-                  ),
+                    ),
+                    Text(widget.data.title,
+                        style: AppTextStyles.searchPageTitle),
+                    const SizedBox(
+                      width: CatalogPageSizes.backIconSize,
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    left: CatalogPagePaddings.basicHorizontal,
-                    top: CatalogPagePaddings.backTitleBottom,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ...getTextList(navigationController),
-                    ],
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: CatalogPagePaddings.basicHorizontal,
+                  top: CatalogPagePaddings.backTitleBottom,
                 ),
-              ],
-            ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ...getTextList(navigationController),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),

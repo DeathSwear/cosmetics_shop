@@ -37,87 +37,90 @@ class _ScaffoldNavBarState extends State<ScaffoldNavBar> {
       builder: (context, currentRoute, child) {
         return Scaffold(
           body: navigationController.getCurrentPage(),
-          bottomNavigationBar: Container(
-            height: NavigationSizes.navBarHeight,
-            padding:
-                const EdgeInsets.only(top: NavigationPaddings.navBarInsideTop),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border(
-                  top: BorderSide(
-                      color: AppColors.disableGray.withOpacity(0.2),
-                      width: NavigationSizes.borderTopWidth),
-                )),
-            child: NavigationBar(
-              backgroundColor: Colors.transparent,
-              destinations: [
-                GestureDetector(
-                  onTap: () =>
-                      goToPage(navigationController, RouteStrings.mainScreen),
-                  child: Column(
+          bottomNavigationBar: navigationController.getCurrentRoute() ==
+                  RouteStrings.catalogFiltersScreen
+              ? null
+              : Container(
+                  height: NavigationSizes.navBarHeight,
+                  padding: const EdgeInsets.only(
+                      top: NavigationPaddings.navBarInsideTop),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border(
+                        top: BorderSide(
+                            color: AppColors.disableGray.withOpacity(0.2),
+                            width: NavigationSizes.borderTopWidth),
+                      )),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Image.asset(
-                        height: NavigationSizes.navBarIconSize,
-                        width: NavigationSizes.navBarIconSize,
-                        ImageSource.houseBarIcon,
-                        fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () => goToPage(
+                            navigationController, RouteStrings.mainScreen),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              height: NavigationSizes.navBarIconSize,
+                              width: NavigationSizes.navBarIconSize,
+                              ImageSource.houseBarIcon,
+                              fit: BoxFit.cover,
+                            ),
+                            Text(AppStrings.navBarHouse,
+                                style: getTextStyle(navigationController, 0))
+                          ],
+                        ),
                       ),
-                      Text(AppStrings.navBarHouse,
-                          style: getTextStyle(navigationController, 0))
+                      GestureDetector(
+                        onTap: () => goToPage(
+                            navigationController, RouteStrings.catalogScreen),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              height: NavigationSizes.navBarIconSize,
+                              width: NavigationSizes.navBarIconSize,
+                              ImageSource.glassBarIcon,
+                              fit: BoxFit.cover,
+                            ),
+                            Text(AppStrings.navBarGlass,
+                                style: getTextStyle(navigationController, 1))
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () => goToPage(
+                            navigationController, RouteStrings.shoppingScreen),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              height: NavigationSizes.navBarIconSize,
+                              width: NavigationSizes.navBarIconSize,
+                              ImageSource.shoppingBarIcon,
+                              fit: BoxFit.cover,
+                            ),
+                            Text(AppStrings.navBarShopping,
+                                style: getTextStyle(navigationController, 2))
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () => goToPage(
+                            navigationController, RouteStrings.profileScreen),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              height: NavigationSizes.navBarIconSize,
+                              width: NavigationSizes.navBarIconSize,
+                              ImageSource.userBarIcon,
+                              fit: BoxFit.cover,
+                            ),
+                            Text(AppStrings.navBarProfile,
+                                style: getTextStyle(navigationController, 3))
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
-                GestureDetector(
-                  onTap: () => goToPage(
-                      navigationController, RouteStrings.catalogScreen),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        height: NavigationSizes.navBarIconSize,
-                        width: NavigationSizes.navBarIconSize,
-                        ImageSource.glassBarIcon,
-                        fit: BoxFit.cover,
-                      ),
-                      Text(AppStrings.navBarGlass,
-                          style: getTextStyle(navigationController, 1))
-                    ],
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () => goToPage(
-                      navigationController, RouteStrings.shoppingScreen),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        height: NavigationSizes.navBarIconSize,
-                        width: NavigationSizes.navBarIconSize,
-                        ImageSource.shoppingBarIcon,
-                        fit: BoxFit.cover,
-                      ),
-                      Text(AppStrings.navBarShopping,
-                          style: getTextStyle(navigationController, 2))
-                    ],
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () => goToPage(
-                      navigationController, RouteStrings.profileScreen),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        height: NavigationSizes.navBarIconSize,
-                        width: NavigationSizes.navBarIconSize,
-                        ImageSource.userBarIcon,
-                        fit: BoxFit.cover,
-                      ),
-                      Text(AppStrings.navBarProfile,
-                          style: getTextStyle(navigationController, 3))
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
         );
       },
     );
