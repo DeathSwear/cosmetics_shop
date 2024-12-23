@@ -4,4 +4,5 @@ class CatalogPageSizes {
   static const double shareImageSize = 25;
   static const double beautiMattButtonWidth = 110;
   static const double backIconSize = 24;
+  static const double applyFiltersButtonHeight = 56;
 }

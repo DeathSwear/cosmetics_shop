@@ -19,4 +19,7 @@ class CatalogPagePaddings {
   static const double chipTextHorizontal = 16;
   static const double chipHeight = 44;
   static const double catalogItemRight = 19;
+  static const double applyFiltersButtonHorizontal = 24;
+  static const double sortRowBottom = 37;
+  static const double sortRowBottomFirst = 47.5;
 }

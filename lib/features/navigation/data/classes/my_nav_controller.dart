@@ -12,8 +12,8 @@ class MyNavController {
   }
 
   final Map<String, Widget> _allRoutes = {};
-
   final ValueNotifier<String> currentRouteNotifier = ValueNotifier<String>('');
+  final Map<String, dynamic> controllerData = {};
 
   int _currentRouteIndex = 0;
   final List<StackForNav<String>> _currentRoutes = [];
@@ -41,19 +41,33 @@ class MyNavController {
     currentRouteNotifier.value = route;
   }
 
-  void pop() {
+  void pop({dynamic data}) {
     String poppedRoute = getCurrentRoute();
+
+    if (data != null) {
+      controllerData[getCurrentRoute()] = data;
+    }
+
     if (_currentRoutes[_currentRouteIndex].pop()) {
       _allRoutes.remove(poppedRoute);
       currentRouteNotifier.value = getCurrentRoute();
     }
   }
 
+  dynamic readControllerDataFrom(String key) {
+    return controllerData[key];
+  }
+
+  void clearControllerData(String key) {
+    controllerData.remove(key);
+  }
+
   void goTo({required String route}) {
+    if (getCurrentRoute().startsWith(route)) return;
     for (int i = 0; i < _currentRoutes.length; i++) {
       if (route == _currentRoutes[i].getMain()) {
         _currentRouteIndex = i;
-        currentRouteNotifier.value = route;
+        currentRouteNotifier.value = getCurrentRoute();
         return;
       }
     }

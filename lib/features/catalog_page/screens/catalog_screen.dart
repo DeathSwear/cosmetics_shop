@@ -8,6 +8,7 @@ import 'package:cosmetics_shop/features/catalog_page/widgets/ideal_home_care_sec
 import 'package:cosmetics_shop/features/catalog_page/widgets/search_text.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/my_nav_controller.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/navigation_provider.dart';
+import 'package:cosmetics_shop/features/navigation/data/constants/route_strings.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
 import 'package:cosmetics_shop/theme/app_strings.dart';
 import 'package:cosmetics_shop/theme/image_source.dart';
@@ -23,7 +24,7 @@ class CatalogScreenState extends State<CatalogScreen> {
   void pushToSelectScreen(
       MyNavController navigationController, SearchTextData data) {
     navigationController.push(
-        route: '/catalogScreen/select',
+        route: RouteStrings.catalogSelectScreen,
         page: CatalogSelectScreen(
           data: data,
         ));

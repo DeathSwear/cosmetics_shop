@@ -13,4 +13,6 @@ class AppStrings {
 
   static const beautiSectionText2 = '10 вопросов о вашей коже';
   static const xProducts = 'продуктов';
+  static const filters = 'Фильтры';
+  static const applyFilters = 'Применить фильтры';
 }

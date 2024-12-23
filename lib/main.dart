@@ -23,11 +23,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final MyNavController navigationController = MyNavController(
       routes: [
-        Pair(const MainScreen(), Routestrings.mainScreen),
-        Pair(const CatalogScreen(), Routestrings.catalogScreen),
+        Pair(const MainScreen(), RouteStrings.mainScreen),
+        Pair(const CatalogScreen(), RouteStrings.catalogScreen),
         Pair(
-            const Text(AppStrings.navBarShopping), Routestrings.shoppingScreen),
-        Pair(const Text(AppStrings.navBarProfile), Routestrings.profileScreen),
+            const Text(AppStrings.navBarShopping), RouteStrings.shoppingScreen),
+        Pair(const Text(AppStrings.navBarProfile), RouteStrings.profileScreen),
       ],
     );
 

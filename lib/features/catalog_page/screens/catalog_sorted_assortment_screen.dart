@@ -1,11 +1,13 @@
 import 'package:cosmetics_shop/features/catalog_page/data/constants/catalog_page_other_constants.dart';
 import 'package:cosmetics_shop/features/catalog_page/data/constants/catalog_page_paddings.dart';
 import 'package:cosmetics_shop/features/catalog_page/data/constants/catalog_page_sizes.dart';
+import 'package:cosmetics_shop/features/catalog_page/screens/catalog_filters_screen.dart';
 import 'package:cosmetics_shop/features/catalog_page/widgets/custom_chip.dart';
 import 'package:cosmetics_shop/features/main_page/data/constants/other_main_page_constants.dart';
 import 'package:cosmetics_shop/features/main_page/widgets/category_list_view.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/my_nav_controller.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/navigation_provider.dart';
+import 'package:cosmetics_shop/features/navigation/data/constants/route_strings.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
 import 'package:cosmetics_shop/theme/app_strings.dart';
 import 'package:cosmetics_shop/theme/app_text_styles.dart';
@@ -28,11 +30,33 @@ class CatalogSortedAssortmentScreenState
   int allItemsCount = OtherMainPageConstants.cateroryNewItems.length * 3;
   int currentIndex = 1;
 
+  void pushToFiltersScreen(MyNavController navigationController) {
+    navigationController.push(
+        route: RouteStrings.catalogFiltersScreen,
+        page: CatalogFiltersScreen(
+          sortValues: sortValues,
+        ));
+  }
+
+  Map<String, String> sortValues =
+      CatalogPageOtherConstants.getBasicSortOptions();
+
+  bool stillNeedGetData = false;
+  void changeSortValues(MyNavController navigationController) {
+    if (stillNeedGetData) return;
+    Map<String, String>? receivedData = navigationController
+        .readControllerDataFrom(RouteStrings.catalogFiltersScreen);
+    if (receivedData != null) {
+      sortValues = receivedData;
+    }
+    stillNeedGetData = true;
+  }
+
   @override
   Widget build(BuildContext context) {
     final MyNavController navigationController =
         MyNavigationProvider.of(context)!.navController;
-
+    changeSortValues(navigationController);
     return Scaffold(
       body: Container(
         color: AppColors.backgroundColor,
@@ -54,9 +78,6 @@ class CatalogSortedAssortmentScreenState
                           size: CatalogPageSizes.backIconSize,
                         ),
                       ),
-                      const SizedBox(
-                        height: 12,
-                      ),
                       const Padding(
                         padding: EdgeInsets.only(
                             top: CatalogPagePaddings.sortedScreenTitleTop,
@@ -76,7 +97,8 @@ class CatalogSortedAssortmentScreenState
                             style: AppTextStyles.sortedScreenProductsCount,
                           ),
                           GestureDetector(
-                            onTap: () {}, //=> navigationController.push(),
+                            onTap: () =>
+                                pushToFiltersScreen(navigationController),
                             child: Image.asset(
                               ImageSource.optionsHorizontal,
                               fit: BoxFit.cover,
@@ -105,7 +127,7 @@ class CatalogSortedAssortmentScreenState
                                   : 0),
                           child: CustomChip(
                               text: CatalogPageOtherConstants
-                                  .typeOfProduct[index],
+                                  .effectOfProduct[index],
                               isCurrent: currentIndex == index ? true : false,
                               onPressed: () {
                                 setState(() {

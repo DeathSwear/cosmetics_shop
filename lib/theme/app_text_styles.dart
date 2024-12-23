@@ -140,4 +140,22 @@ class AppTextStyles {
     fontSize: 14,
     color: AppColors.blackColor,
   );
+  static const sortTitle = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    color: AppColors.blackColor,
+  );
+  static const sortDropText = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+    color: AppColors.black50Color,
+  );
+  static const applyFilters = TextStyle(
+    //Raleway
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    color: AppColors.whiteColor,
+  );
 }

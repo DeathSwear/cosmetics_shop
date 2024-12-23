@@ -4,6 +4,7 @@ import 'package:cosmetics_shop/features/catalog_page/data/constants/catalog_page
 import 'package:cosmetics_shop/features/catalog_page/screens/catalog_sorted_assortment_screen.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/my_nav_controller.dart';
 import 'package:cosmetics_shop/features/navigation/data/classes/navigation_provider.dart';
+import 'package:cosmetics_shop/features/navigation/data/constants/route_strings.dart';
 import 'package:cosmetics_shop/theme/app_colors.dart';
 import 'package:cosmetics_shop/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +23,10 @@ class CatalogSelectScreenState extends State<CatalogSelectScreen> {
   void pushToSortedAssortmentScreen(
       MyNavController navigationController, String data) {
     navigationController.push(
-        route: '/catalogScreen/select/assortment',
+        route: RouteStrings.catalogAssortmentScreen,
         page: CatalogSortedAssortmentScreen(
           someData: data,
+          key: GlobalKey(),
         ));
   }
 
@@ -60,8 +62,8 @@ class CatalogSelectScreenState extends State<CatalogSelectScreen> {
             child: ListView(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(
-                      left: CatalogPagePaddings.basicHorizontal),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: CatalogPagePaddings.basicHorizontal),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

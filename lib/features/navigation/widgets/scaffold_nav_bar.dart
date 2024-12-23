@@ -52,7 +52,8 @@ class _ScaffoldNavBarState extends State<ScaffoldNavBar> {
               backgroundColor: Colors.transparent,
               destinations: [
                 GestureDetector(
-                  onTap: () => goToPage(navigationController, '/mainScreen'),
+                  onTap: () =>
+                      goToPage(navigationController, RouteStrings.mainScreen),
                   child: Column(
                     children: [
                       Image.asset(
@@ -67,7 +68,8 @@ class _ScaffoldNavBarState extends State<ScaffoldNavBar> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () => goToPage(navigationController, '/catalogScreen'),
+                  onTap: () => goToPage(
+                      navigationController, RouteStrings.catalogScreen),
                   child: Column(
                     children: [
                       Image.asset(
@@ -83,7 +85,7 @@ class _ScaffoldNavBarState extends State<ScaffoldNavBar> {
                 ),
                 GestureDetector(
                   onTap: () => goToPage(
-                      navigationController, Routestrings.shoppingScreen),
+                      navigationController, RouteStrings.shoppingScreen),
                   child: Column(
                     children: [
                       Image.asset(
@@ -99,7 +101,7 @@ class _ScaffoldNavBarState extends State<ScaffoldNavBar> {
                 ),
                 GestureDetector(
                   onTap: () => goToPage(
-                      navigationController, Routestrings.profileScreen),
+                      navigationController, RouteStrings.profileScreen),
                   child: Column(
                     children: [
                       Image.asset(
